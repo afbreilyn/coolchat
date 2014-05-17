@@ -9,6 +9,10 @@ html, body, section, h1, ul, li, div, form {
   vertical-align: baseline;
 }
 
+body {
+  background: #5B8BCE;
+}
+
 input[type="text"] {
   /*padding: 3px 5px;*/
   border: 0;
@@ -44,9 +48,19 @@ h1 {
 }
 
 header {
-  padding: 10px;
+  padding: 10px 0 20px 0;
   position: absolute;
   right: 0;
+}
+
+form#username{
+  margin-right: 20px;
+}
+
+input#submit-username,
+input#username {
+  background: white;
+  padding: 3px 5px;
 }
 
 .nav-right {
@@ -65,8 +79,6 @@ section.chat-room {
   margin-bottom: 50px;
   background: #ccc;
 }
-
-
 
 ul#chats {
   height: 400px;
