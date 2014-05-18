@@ -46,13 +46,14 @@ h1 {
   text-align: center;
   margin-top: 20px;
   margin-right: 15px;
+  margin-bottom: 35px;
+  color: #7A9A95;
 }
 
 header {
   padding: 10px 0 20px 0;
   position: absolute;
   right: 0;
-  background: #FA8B60;
 }
 
 form#username{
@@ -105,15 +106,12 @@ li.chat > .username {
   float: left;
   width: 150px;
   font-weight: bold;
-  border-right: 1px solid black;
-  /*height: 25;*/
-  /*clear: right;*/
-
+  /*border-right: 1px solid black;*/
 }
 
 li.chat > .message {
   float: right;
-  width: 516px;
+  width: 514px;
   /*min-height: 25px;*/
   text-indent: 15px;
 }
@@ -123,9 +121,8 @@ div.users-list {
   float: left;
   width: 170px;
   height: 381px;
-  border: 1px solid #ccc;
   padding: 10px;
-  background: white;
+  background: #FA8B60;
   border-radius: 8px;
   margin-right: 20px;
 }
