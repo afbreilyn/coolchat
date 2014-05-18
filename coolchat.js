@@ -33,9 +33,9 @@ if (Meteor.isClient) {
     var $chats = $("ul#chats");
     var $lastChat = $("ul#chats>li.chat:last-child");
     if ($lastChat && $lastChat.position()) {
-      console.log("i suck");
       $chats.scrollTop($lastChat.position().top);
     }
+
   };
 
   Template.chatRoom.chats = function () {
@@ -47,11 +47,16 @@ if (Meteor.isClient) {
       event.preventDefault();
 
       var $message= $("input#message");
-      Chats.insert({
-        message: $message.val(),
-        username: username(),
-        time_created: Date.now()
-      });
+      console.log($message.val());
+
+        if ($message.val() !== "") {
+          Chats.insert({
+            message: $message.val(),
+            username: username(),
+            time_created: Date.now()
+          });
+        };
+
       $message.val("");
     }
   });
