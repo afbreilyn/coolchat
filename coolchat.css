@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 
-html, body, section, h1, ul, li, div, form {
+html, body, section, h1, h2, ul, li, div, form {
   padding: 0;
   border: 0;
   margin: 0;
@@ -10,7 +10,7 @@ html, body, section, h1, ul, li, div, form {
 }
 
 body {
-  background: #5B8BCE;
+  background: #3F2860;
 }
 
 input[type="text"] {
@@ -28,6 +28,7 @@ input[type="submit"] {
   font: inherit;
   background: transparent;
   box-sizing: content-box;
+  border-radius: 10px;
 }
 
 input#username {
@@ -44,13 +45,14 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin-top: 20px;
-  margin: 10px 0 20px 0;
+  margin-right: 15px;
 }
 
 header {
   padding: 10px 0 20px 0;
   position: absolute;
   right: 0;
+  background: #FA8B60;
 }
 
 form#username{
@@ -72,12 +74,14 @@ ul {
 }
 
 section.chat-room {
-  width: 800px;
-  padding: 8px;
+  width: 900px;
+  height: 455px;
+  padding: 15px;
   margin: auto;
-  border: 2px solid #ccc;
+  border: 4px solid #90C5A9;
   margin-bottom: 50px;
-  background: #ccc;
+  background: #333333;
+  border-radius: 10px;
 }
 
 ul#chats {
@@ -109,31 +113,58 @@ li.chat > .username {
 
 li.chat > .message {
   float: right;
-  width: 635px;
+  width: 516px;
   /*min-height: 25px;*/
   text-indent: 15px;
 }
 
-form.new-message {
+
+div.users-list {
+  float: left;
+  width: 170px;
+  height: 381px;
   border: 1px solid #ccc;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+form.new-message {
+  border: 1px solid #EF6D3B;
+  border-radius: 5px; 
+  float: right;
 }
 
 input#message {
   font-size: 20px;
   padding: 5px;
-  width: 700px;
-  margin-right: 5px;
-  border-right: 1px solid #ccc;
+  width: 590px;
+  margin: 4px 6px 4px 4px;
   background: white;
+  border-radius: 5px;
 }
 
 input#submit-message {
-  width: 73px;
+  width: 68px;
   color: black;
   background: white;
   cursor: pointer;
   font-size: 20px;
+  margin-right: 5px;
 }
 
-
+::-webkit-scrollbar {
+  width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 

@@ -21,14 +21,31 @@
   </header>
 
   <h1>CoolChat</h1>
-  <section class="chat-room">
+  <section class="chat-room group">
+    <div class="users-list">
+
+      <h2>Cool Peoples:</h2>
+      <ul>
+        {{#each users}}
+          {{> user}}
+        {{/each}}
+      </ul>
+    </div>
+
     <ul id="chats">
       {{#each chats}}
         {{> chat}}
       {{/each}}
     </ul>
+
     {{> newMessage}}
   </section>
+</template>
+
+<template name="user">
+  <li class="user {{selected}}">
+    <span class="username">{{username}}</span>
+  </li>
 </template>
 
 <template name="chat">
