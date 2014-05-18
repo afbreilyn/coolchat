@@ -32,7 +32,28 @@ input[type="submit"] {
 }
 
 input#username {
-  border: 1px solid black;
+  width: 120px;
+  display: block;
+  margin-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 3px;
+}
+
+input#submit-username, .reset-username {
+  float: right;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 2px 6px 3px 6px;
+  background: #F1922E;
+  color: white;
+  cursor: pointer;
+}
+
+input#submit-username:hover, .reset-username:hover {
+  background: #FFB55A;
 }
 
 group:after {
@@ -43,11 +64,12 @@ group:after {
 
 h1 {
   font-size: 60px;
+  font-weight: bold;
   text-align: center;
   margin-top: 20px;
   margin-right: 15px;
   margin-bottom: 35px;
-  color: #7A9A95;
+  color: #EF6D3B;
 }
 
 header {

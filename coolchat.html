@@ -9,14 +9,14 @@
 
 <template name="chatRoom">
   <header>
-    {{#if username}}
-      <div class="logged-in">Logged in as {{username}}</div>
-      <div class="reset-username">Change username</div>
-    {{else}}
+    {{#if changeName}}
       <form id="username">
-        <input type="text" id="username">
-        <input type="submit" id="submit-username">
+        <input type="text" id="username" value="{{oldUsername}}">
+        <input type="submit" id="submit-username" value="Set name">
       </form>
+    {{else}}
+        <div class="logged-in">Chatting as {{username}}</div>
+        <div class="reset-username">Change Name</div>
     {{/if}}
   </header>
 
