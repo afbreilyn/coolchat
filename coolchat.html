@@ -21,9 +21,8 @@
   </header>
 
   <h1>CoolChat</h1>
-  <section class="chat-room group">
+  <section class="content group">
     <div class="users-list">
-
       <h2>Cool Peoples:</h2>
       <ul>
         {{#each users}}
@@ -32,13 +31,15 @@
       </ul>
     </div>
 
-    <ul id="chats">
-      {{#each chats}}
-        {{> chat}}
-      {{/each}}
-    </ul>
+    <div class="chat-room">
+      <ul id="chats">
+        {{#each chats}}
+          {{> chat}}
+        {{/each}}
+      </ul>
+      {{> newMessage}}
+    </div>
 
-    {{> newMessage}}
   </section>
 </template>
 
