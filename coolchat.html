@@ -1,5 +1,5 @@
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,800italic,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,300,700' rel='stylesheet' type='text/css'>
   <title>coolchat</title>
 </head>
 
@@ -20,10 +20,14 @@
     {{/if}}
   </header>
 
-  <h1>CoolChat</h1>
+  <section class="heading">
+    <h1>CoolChat</h1>
+    <h2 class="sub-title">Where cool people come to hang out!</h2>
+  </section>
+
   <section class="content group">
     <div class="users-list">
-      <h2>Cool Peoples:</h2>
+      <h2 class="subheader">Cool Peoples:</h2>
       <ul>
         {{#each users}}
           {{> user}}
