@@ -22,15 +22,17 @@ if (Meteor.isClient) {
     return user && user.username;
   };
 
+  var voiceSwitch = false;
+
   Template.user.selected = function() {
     return (this._id === Session.get("user_id")) ? "selected" : "";
   };
   
   Template.user.catIcon = function() {
     if (Date.now() - 30000 > this.last_action) {
-      return "orange_cat.png";
+      // do something denoting that they are not logged in
     } else {
-      return "green_cat.png";
+      // show that they're online
     }
   };
 
@@ -73,6 +75,8 @@ if (Meteor.isClient) {
     var $chats = $("ul#chats");
     var scrollPos = 0;
 
+    // console.log($chats);
+
     $chats.find("li").each(function() {
       scrollPos += $(this).height();
     })
@@ -87,6 +91,17 @@ if (Meteor.isClient) {
       var $message = $("input#message");
       var message = ($message.val() === "") ? "nothing" : $message.val();
       
+      // console.log(username());
+
+      var x = Chats._collection.queries[2].results.length;
+      var y = Chats._collection.queries[2].results[x - 1];
+
+      if (y) { 
+        if (username() !== y.username) {
+          // console.log("user who is talking changed")
+        }
+      };
+
       Chats.insert({
         message: message,
         username: username(),

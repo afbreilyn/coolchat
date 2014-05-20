@@ -123,6 +123,10 @@ ul {
   list-style: none;
 }
 
+.change {
+  background: blue;
+}
+
 section.content {
   width: 900px;
   height: 455px;
